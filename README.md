@@ -1,18 +1,29 @@
-# CNN + SVM + XGBoost Hybrid for Agricultural Seedling Classification 🌱
-Convolutional Neural Network and Hybrid Models for Agricultural Seedling Classification
 
-This repository contains the implementation and experiments for **CNN-based deep feature extraction combined with traditional machine learning classifiers (SVM and XGBoost)** to classify plant seedlings into **12 species**.  
-The project was developed as part of the **COS801 Introduction to Deep Learning** coursework.
+## 📊 Project Overview
+
+- **Goal:** Classify crop seedlings and weed species from image data to support precision agriculture.
+- **Dataset:** 12 species of seedlings provided in separate training and testing directories.
+- **Approach:**
+  - A lightweight **Convolutional Neural Network (CNN)** was trained on the dataset for feature extraction.
+  - Extracted feature vectors (size `256`) were used to train:
+    - **Support Vector Machine (SVM)** with a linear kernel.
+    - **XGBoost** with tuned hyperparameters.
+- **Evaluation Metrics:** Accuracy, precision, recall, weighted F1-score, and micro-average ROC-AUC.
 
 ---
 
-## 📂 Repository Structure
-├── classification.py # Main script for training, feature extraction, and predictions
-├── data/ # Folder for training and test data (not included due to size)
-├── models/ # Saved PyTorch models and feature extractions
-├── results/ # Output predictions, validation logs, and figures
-├── cnn_test_predictions.csv # CNN model test predictions
-├── svm_test_predictions.csv # CNN+SVM model test predictions
-├── xgb_test_predictions.csv # CNN+XGBoost model test predictions
-├── report.pdf # Final compiled report (submitted)
-└── README.md # Project documentation
+## ⚙️ Installation
+
+ 1. Clone this repository
+```bash
+git clone https://github.com/your-username/seedling-classification.git
+cd seedling-classification
+
+ 2. Create and activate a Python environment
+python -m venv env
+source env/bin/activate   # On Linux/Mac
+env\Scripts\activate      # On Windows
+
+3. Install dependencies
+pip install -r requirements.txt
+
